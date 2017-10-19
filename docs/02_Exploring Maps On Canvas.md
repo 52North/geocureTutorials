@@ -9,7 +9,7 @@ In this tutorial, a very lightweight web map information application is develope
 On the frontend, we are going to use just HTML and javascript.
 Bootstrap and jQuery will make our lives a little bit easier.
 On the backend, geocure serves the image data and the requested information.
-
+The final files of this tutorial can be found in the github repository of this tutorial.
 
 ### Let's start
 
