@@ -13,15 +13,14 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Sensor Web Best Practices
+title: geocure tutorials
 email: info@52north.org
 description: > #
-  This tutorial has been developed within the ConnectinGEO project in order
-  to lower the hurdle to create interoperable solutions using Sensor Web
-  technology. It gives an overview on the relevant standards and the related
-  technology. In order to give the users a jump start, it uses exemplary
-  scenarios to illustrate the different approaches.
-baseurl: "/sensor-web-tutorial" # the subpath of your site, e.g. /blog
+  The provided tutorials serve as a starting and inspiration point for using
+  [geocure](https://github.com/52North/geocure) from [52N](http://52north.org/)
+  in the development of applications. In order to give the users a jump start,
+  exemplary scenarios are used to illustrate its benefits.
+baseurl: "/geocure-tutorials" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: FiveTwoN
 github_username:  52North
@@ -35,4 +34,3 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - vendor
-

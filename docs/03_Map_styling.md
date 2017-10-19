@@ -110,7 +110,7 @@ window.onload = function() {
 ```
 
 Reference-style:
-![color picker image](./colorpicker.png)
+![color picker image](./images/colorpicker.png)
 
 Now we have to take two cases into account:
   - The selected map changes.
