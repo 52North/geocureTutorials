@@ -1,0 +1,9 @@
+#mapCanvas {
+  display: table;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  overflow: scroll;
+  box-shadow: 10px 10px 5px grey;
+  outline: black 3px solid;
+}
