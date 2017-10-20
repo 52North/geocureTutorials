@@ -1,9 +1,9 @@
 ---
-title: Geocure Integration With Leaflet
+title: geocure Integration With Leaflet
 layout: page
 ---
 
-# Geocure integration with Leaflet
+# geocure integration with Leaflet
 
 ## Table of Contents
 <!-- TOC depthFrom:2 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
@@ -11,7 +11,7 @@ layout: page
 - [Table of Contents](#table-of-contents)
 - [Introduction](#introduction)
 - [Use Case](#use-case)
-- [The Geocure API](#the-geocure-api)
+- [The geocure API](#the-geocure-api)
 	- [Basic concept](#basic-concept)
 	- [Learning by example](#learning-by-example)
 		- [Get list of services](#get-list-of-services)
@@ -25,11 +25,11 @@ layout: page
 	- [Code structure](#code-structure)
 	- [The basic app](#the-basic-app)
 		- [The map pane](#the-map-pane)
-		- [Connecting to Geocure](#connecting-to-geocure)
+		- [Connecting to geocure](#connecting-to-geocure)
 		- [Adding layers](#adding-layers)
 			- [Adding raster layers](#adding-raster-layers)
 			- [Adding vector layers](#adding-vector-layers)
-	- [Geocure parameters](#geocure-parameters)
+	- [geocure parameters](#geocure-parameters)
 		- [bbox](#bbox)
 	- [Leaflet options](#leaflet-options)
 		- [Filtering](#filtering)
@@ -44,29 +44,29 @@ layout: page
 <!-- /TOC -->
 
 ## Introduction
-This developer tutorial will outline and explain the creation process of the [Geocure Demo Client](https://github.com/christophfriedrich/geocure-demo), showcasing different methods, how-tos and best-practices that might help you to make use of [52°North](http://52north.org/)'s [Geocure REST API](https://github.com/52North/geocure) in your own applications.
+This developer tutorial will outline and explain the creation process of the [geocure Demo Client](https://github.com/christophfriedrich/geocure-demo), showcasing different methods, how-tos and best-practices that might help you to make use of [52°North](http://52north.org/)'s [geocure REST API](https://github.com/52North/geocure) in your own applications.
 
 `TODO: The URL to the GitHub repository points to the developer's personal repository (christophfriedrich). When it is moved into an official repository of 52°North, the URL should be replaced!`
 
 ## Use Case
-We've got data on the [COLABIS Geoserver](https://geoserver.colabis.de/geoserver/). We want to make it possible to explore this data via a web application. For painless use in our JavaScript app, we want to use the Geocure REST API as a proxy for the Geoserver data.
+We've got data on the [COLABIS Geoserver](https://geoserver.colabis.de/geoserver/). We want to make it possible to explore this data via a web application. For painless use in our JavaScript app, we want to use the geocure REST API as a proxy for the Geoserver data.
 
-## The Geocure API
+## The geocure API
 
 ### Basic concept
-First things first: We need an **API endpoint** to address our requests to. In this tutorial we will use the permanently deployed Geocure instance at `http://colabis.dev.52north.org/geocure`.
+First things first: We need an **API endpoint** to address our requests to. In this tutorial we will use the permanently deployed geocure instance at `http://colabis.dev.52north.org/geocure`.
 
-Geocure provides RESTful access to **services** which offer geospatial data. One instance of Geocure can offer access to multiple services.
+geocure provides RESTful access to **services** which offer geospatial data. One instance of geocure can offer access to multiple services.
 
 Data provided by the services is classified into two main distinct categories:
 1. Raster data, which is fetched from a Web Map Service (WMS) and therefore called **maps**
 2. Vector data, which is fetched from a Web Feature Service (WFS) and therefore called **features**
 
 ### Learning by example
-Let's get to know how Geocure works by looking at some request examples.
+Let's get to know how geocure works by looking at some request examples.
 
 #### Get list of services
-To get started, we need a list of the services offered by the Geocure instance. We can retrieve such a list by adding `/services` to our endpoint URL and `GET`ting it:
+To get started, we need a list of the services offered by the geocure instance. We can retrieve such a list by adding `/services` to our endpoint URL and `GET`ting it:
 
 Request: `GET http://colabis.dev.52north.org/geocure/services`
 
@@ -82,7 +82,7 @@ Response:
 ]
 ````
 
-In this case, the Geocure instance hosts only one service, labelled "Colabis Geoserver". Every service has a unique `id`, in this case that ID is `colabis-geoserver`.
+In this case, the geocure instance hosts only one service, labelled "Colabis Geoserver". Every service has a unique `id`, in this case that ID is `colabis-geoserver`.
 
 #### GetCapabilities
 Ok, we want to use that promising looking service -- how do we get more information from it? We append the service's `id` to the URL we had so far -- easy!
@@ -105,7 +105,7 @@ Response:
 
 Ok, not much is new since the metadata from the previous request is repeated, but we've got one new property: `capabilities`.
 
-This property is an object, which again has two properties: `maps` and `features`. As you will have guessed, following the URLs stored in these properties will get you a list of the raster or vector layers (respectively) the Geocure instance offers.
+This property is an object, which again has two properties: `maps` and `features`. As you will have guessed, following the URLs stored in these properties will get you a list of the raster or vector layers (respectively) the geocure instance offers.
 
 > **EXCURSUS:** If you looked closely at the JSON responses, you probably weren't very surprised what we did next - the URL we used in the next step was always in the previous response. This concept is called hypermedia, or more specifically HATEOAS *("Hypermedia As The Engine Of Application State")*. It means that a response always includes a link to what we could do next. <!--Handy when you don't want to RTFM, uh? ;-)-->
 
@@ -278,7 +278,7 @@ The `index.html`
 ````html
 <html>
 <head>
-	<title>Geocure REST API Demo Client</title>
+	<title>geocure REST API Demo Client</title>
 	<!-- Leaflet includes -->
 	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
 	<script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
@@ -331,8 +331,8 @@ $(document).ready(function() {
 
 With this example we can already explore the base map in our app.
 
-#### Connecting to Geocure
-Let's bring in the Geocure stuff.
+#### Connecting to geocure
+Let's bring in the geocure stuff.
 
 Remember this from above?
 
@@ -413,7 +413,7 @@ function addMaps(data) {
 With this code, an entry for each map layer is generated in the laycer control component. When the user selects a map from the component, Leaflet will automatically retrieve the picture and overlay it on the map for us.
 
 ##### Adding vector layers
-Geocure returns the requested vector data as GeoJSON.
+geocure returns the requested vector data as GeoJSON.
 
 Unlike with the maps, in this case we have to provide Leaflet with the actual data instead of the URL to it, i.e. we have to download that GeoJSON ourselves and pass it to the `L.geoJson` function, which turns it into a Leaflet layer.
 
@@ -447,10 +447,10 @@ function addFeatures(data) {
 
 See the following chapter [Leaflet options](#leaflet-options) for examples of `params` and `options` or consult the source code for the full example.
 
-### Geocure parameters
+### geocure parameters
 
 #### bbox
-Geocure accepts a bbox parameter. We use that like this:
+geocure accepts a bbox parameter. We use that like this:
 
 ````js
 switch(layer.title) {
@@ -577,4 +577,4 @@ function addMaps(data) {
 *NOTE: A more powerful component that allows individual opacity control for each layer would be handy, but I couldn't find one and so far didn't bother making one myself.*
 
 ## Contact
-The Geocure Demo Client was developed by [Christoph Friedrich](https://github.com/christophfriedrich/). Contact via [E-Mail](mailto:c.friedrich@52north.org).
+The geocure Demo Client was developed by [Christoph Friedrich](https://github.com/christophfriedrich/). Contact via [E-Mail](mailto:c.friedrich@52north.org).
