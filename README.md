@@ -1,14 +1,11 @@
 # Tutorials for using geocure
 
-This tutorial has been developed within the
+The tutorials have been developed within the
 [COLABIS](https://colabis.de/) project in order
 to lower the hurdle to use [goecure](https://github.com/52North/geocure) from [52°North](http://52north.org/).
-It gives an overview on the relevant standards and the related
-technology. In order to give the users a jump start, it uses exemplary
-scenarios to illustrate the different approaches.
 
 
-The tutorial is available on the 52°North GitHub Pages:
+The tutorials are available on the 52°North GitHub Pages:
 
 https://52north.github.io/geocureTutorials/
 
