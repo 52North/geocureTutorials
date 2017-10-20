@@ -1,0 +1,40 @@
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 8px;
+    height: calc(100% - 16px);
+    display: flex;
+    flex-direction: row;
+    font-family: sans-serif;
+}
+
+#map {
+    height: 100%;
+    flex:1;
+}
+
+#sidebar {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 5px;
+    padding-right: 10px;
+}
+
+#sidebar #content {
+    flex: 1;
+}
+
+a,
+#sidebar #content ul li {
+    cursor: pointer;
+    color: dodgerblue;
+    text-decoration: underline;
+}
+
+#sidebar #footer {
+    text-align: center;
+}
