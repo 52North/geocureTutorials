@@ -6,6 +6,8 @@ to lower the hurdle to use [goecure](https://github.com/52North/geocure) from [5
 
 The tutorials are available on the 52°North GitHub Pages: https://52north.github.io/geocureTutorials/
 
+The folders _demoClient_, _demoGetFeatureInfo_ and _demoFeatureBorderColor_ contain the results from the tutorials.
+
 ## Acknowledgement
 
 The development of geocure was performed as part of the COLABIS
