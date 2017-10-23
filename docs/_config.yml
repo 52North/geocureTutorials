@@ -20,7 +20,7 @@ description: > #
   [geocure](https://github.com/52North/geocure) from [52N](http://52north.org/)
   in the development of applications. In order to give the users a jump start,
   exemplary scenarios are used to illustrate its benefits.
-baseurl: "/geocure-tutorials" # the subpath of your site, e.g. /blog
+baseurl: "/geocuretutorials" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: FiveTwoN
 github_username:  52North
