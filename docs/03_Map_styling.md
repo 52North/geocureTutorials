@@ -162,7 +162,7 @@ function style(layerId) {
  let closeNamedLayer = '</NamedLayer>';
  let closeStyle = '</StyledLayerDescriptor>'
 
- return '&sldbody=' + encodeURIComponent(openStyle + openNamedLayer + name + openUserStyleStroke + strokeColor + strokeWidth + closeUserStyleStroke + closeNamedLayer + closeStyle);
+ return '&sld=' + encodeURIComponent(openStyle + openNamedLayer + name + openUserStyleStroke + strokeColor + strokeWidth + closeUserStyleStroke + closeNamedLayer + closeStyle);
 }
 ```
 
