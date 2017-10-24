@@ -128,7 +128,7 @@ function style(layerName) {
  let closeNamedLayer = '</NamedLayer>';
  let closeStyle = '</StyledLayerDescriptor>'
 
- return '&sldbody=' + encodeURIComponent(openStyle + openNamedLayer + name + openUserStyleStroke + strokeColor  + closeUserStyleStroke + closeNamedLayer + closeStyle);
+ return '&sld=' + encodeURIComponent(openStyle + openNamedLayer + name + openUserStyleStroke + strokeColor  + closeUserStyleStroke + closeNamedLayer + closeStyle);
 }
 
 // We changed the image, so the url for information requests has to change.
