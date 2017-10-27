@@ -7,6 +7,8 @@ layout: page
 
 This tutorial builds upon the tutorial *Exploring Maps On Canvas*, which can be found in this tutorial series.
 Currently, we are able to select a map, we want to see. Now we want to enrich the application by adding a color picker, which allows us to select the feature border color of the displayed map.
+![alt text](https://github.com/52North/geocureTutorials/blob/master/docs/images/colorExample.png "color example")
+The final files of this tutorial can be found in the folder [demoFeatureBorderColor](https://github.com/52North/geocureTutorials/tree/master/demoFeatureBorderColor) in the github repository of this tutorial.
 New sections are marked with *New Start* and *New End*.
 
 ### Let's start
