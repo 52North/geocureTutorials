@@ -6,10 +6,11 @@ layout: page
 ## About this tutorial
 
 In this tutorial, a very lightweight web map information application is developed.
+![alt text](https://github.com/52North/geocureTutorials/blob/master/docs/images/getInfo.png "Final result")
 On the frontend, we are going to use just HTML and javascript.
 Bootstrap and jQuery will make our lives a little bit easier.
 On the backend, geocure serves the image data and the requested information.
-The final files of this tutorial can be found in the folder *demoGetFeatureInfo* the github repository of this tutorial.
+The final files of this tutorial can be found in the folder [demoGetFeatureInfo](https://github.com/52North/geocureTutorials/tree/master/demoGetFeatureInfo) in the github repository of this tutorial.
 
 ### Let's start
 
